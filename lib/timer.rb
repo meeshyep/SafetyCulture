@@ -1,10 +1,9 @@
+require_relative 'traffic_light'
+
 class Timer
     
-    attr_accessor :five_min_timer
-    
-    def five_min_timer
-        @five_min_timer = Time.now + (60*5) 
-        puts @five_min_timer
-        change_color
+    def thirty_min_later
+        time = Time.now
+        time + (300 * 6)
     end
-end 
+end

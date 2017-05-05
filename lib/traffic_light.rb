@@ -1,6 +1,8 @@
+require_relative 'timer'
+
 class TrafficLight
     
-    attr_accessor :id, :direction, :color
+    attr_accessor :id, :direction, :color, :five_min_timer
     
     def initialize(id, direction, color)
         @id = id
@@ -10,27 +12,23 @@ class TrafficLight
     
     def change_color
         if @color =='Red'
-            @color = 'Green'
+            @color = 'Green' 
             puts @color
             puts @five_min_timer
         elsif @color == 'Green'
-            @color = 'Yellow'
+            @color = 'Yellow' 
             puts @color
-            puts Time.now
+            puts @yellow_timer
             @color = 'Red'
             puts @color
-            puts Time.now
+            puts @red_timer
         end 
     end
     
     def five_min_timer
-        time = Time.now
-        @five_min_timer = time + (60*5) 
+        @five_min_timer = Time.now + (60*5)
+        @yellow_timer = @five_min_timer + (30)
+        @red_timer = @yellow_timer + (270)
         change_color
-      end
-    
-    def thirty_min_later
-        @time = Time.now
-        @time + (300 * 6)
     end
 end 
