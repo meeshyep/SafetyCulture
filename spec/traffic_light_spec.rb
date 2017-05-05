@@ -1,4 +1,5 @@
 require 'traffic_light'
+require 'timer'
 
 describe TrafficLight do 
     
