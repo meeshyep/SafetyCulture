@@ -23,7 +23,11 @@ Provide the output for the light changes which occur during a 30 minute period.
 
 I assume the lights change in the order of Green/Yellow/Red and back to Green. 
 
-I initialize each new traffic light with three requirements: the unit number, the direction it's facing, what color the light is.
+I initialize each new traffic light with three requirements: the unit number, the direction it's facing, and what color the light is.
+
+```
+TrafficLight.new(1, 'N', 'Red')
+```
 
 - I have set the specific traffic light units to numbers, assuming (N/S) are Unit 1, and (E/W) are Unit 2. 
 - To know if Unit 1 is pointing (N/S), I have requried that this be indicated upon initialization. The same can be done for (E/W). 
